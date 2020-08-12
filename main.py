@@ -2,7 +2,8 @@ import pygame
 import sys
 from sprites import *
 from settings import *
-
+from map import *
+from camera import *
 
 class Game:
     def __init__(self):
@@ -13,21 +14,30 @@ class Game:
         self.main_surface.fill(DEFAULT_COLOR)
         self.dt = 0
 
-    def new_game(self):
+    def load_data_map(self):
+        for y, row in enumerate(self.map.data):
+            for x, col in enumerate(row):
+                if col == "w":
+                    Wall(x * SIZE_TILE, y * SIZE_TILE, self.all_sprites, self.walls)
+
+    def new_game(self, src):
+        self.map = Map(src)
+        self.camera = Camera(self.map.width, self.map.height)
         self.all_sprites = pygame.sprite.Group()
         self.walls = pygame.sprite.Group()
         self.player = Player(self, 0, 0, self.all_sprites)
-        Wall(300, 400, self.all_sprites, self.walls)
-        Wall(300, 432, self.all_sprites, self.walls)
-        Wall(300, 464, self.all_sprites, self.walls)
+        self.load_data_map()
 
     def update(self):
         self.all_sprites.update()
+        self.camera.update(self.player)
         self.main_surface.fill(DEFAULT_COLOR)
-        self.all_sprites.draw(self.main_surface)
+        for sprite in self.all_sprites:
+            self.main_surface.blit(sprite.image, self.camera.apply(sprite))
         self.window.blit(self.main_surface, (0, 0))
         pygame.display.update()
         self.dt = pygame.time.Clock().tick(FPS) / 1000
+        print(self.player.rect.x, self.player.rect.y)
 
     def events(self):
         for event in pygame.event.get():
@@ -37,7 +47,7 @@ class Game:
 
 
 game = Game()
-game.new_game()
+game.new_game("f.txt")
 while True:
     game.events()
     game.update()
