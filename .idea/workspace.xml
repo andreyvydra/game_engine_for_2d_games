@@ -50,28 +50,10 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< Updated upstream
     <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="game_engine_for_2d_games" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../проекты/part 03" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../проекты/part 03/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+=======
+    <configuration name="camera" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="game_engine_for_2d_games" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -83,7 +65,62 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/camera.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+>>>>>>> Stashed changes
+      <module name="game_engine_for_2d_games" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../проекты/part 04" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../проекты/part 04/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+<<<<<<< Updated upstream
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+=======
+    <configuration name="main (3)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+>>>>>>> Stashed changes
+      <module name="game_engine_for_2d_games" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+<<<<<<< Updated upstream
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+=======
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../проекты/part 06" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../проекты/part 06/main.py" />
+>>>>>>> Stashed changes
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -113,7 +150,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="sprites" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="sprites (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="game_engine_for_2d_games" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -121,11 +158,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../проекты/part 03" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../проекты/part 03/sprites.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sprites.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -137,9 +174,16 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+<<<<<<< Updated upstream
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.sprites" />
         <item itemvalue="Python.settings" />
+=======
+        <item itemvalue="Python.main (3)" />
+        <item itemvalue="Python.sprites (1)" />
+        <item itemvalue="Python.main (2)" />
+        <item itemvalue="Python.camera" />
+>>>>>>> Stashed changes
       </list>
     </recent_temporary>
   </component>
@@ -162,6 +206,7 @@
     <state width="1345" height="151" key="GridCell.Tab.0.bottom" timestamp="1597000634476">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+<<<<<<< Updated upstream
     <state width="1345" height="151" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1597000634476" />
     <state width="1345" height="151" key="GridCell.Tab.0.center" timestamp="1597000634476">
       <screen x="0" y="0" width="1366" height="728" />
@@ -176,29 +221,53 @@
     </state>
     <state width="1345" height="151" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1597000634476" />
     <state width="1345" height="151" key="GridCell.Tab.1.bottom" timestamp="1597000634476">
+=======
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597247859885" />
+    <state width="1345" height="151" key="GridCell.Tab.0.bottom" timestamp="1597314827364">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="151" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1597000634476" />
-    <state width="1345" height="151" key="GridCell.Tab.1.center" timestamp="1597000634476">
+    <state width="1345" height="151" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1597314827364" />
+    <state width="1345" height="151" key="GridCell.Tab.0.center" timestamp="1597314827364">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="151" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1597000634476" />
-    <state width="1345" height="151" key="GridCell.Tab.1.left" timestamp="1597000634476">
+    <state width="1345" height="151" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1597314827364" />
+    <state width="1345" height="151" key="GridCell.Tab.0.left" timestamp="1597314827364">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="151" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1597000634476" />
-    <state width="1345" height="151" key="GridCell.Tab.1.right" timestamp="1597000634476">
+    <state width="1345" height="151" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1597314827364" />
+    <state width="1345" height="151" key="GridCell.Tab.0.right" timestamp="1597314827364">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="151" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1597000634476" />
+    <state width="1345" height="151" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1597314827364" />
+    <state width="1345" height="151" key="GridCell.Tab.1.bottom" timestamp="1597314827364">
+>>>>>>> Stashed changes
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="151" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1597314827364" />
+    <state width="1345" height="151" key="GridCell.Tab.1.center" timestamp="1597314827364">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="151" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1597314827364" />
+    <state width="1345" height="151" key="GridCell.Tab.1.left" timestamp="1597314827364">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="151" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1597314827364" />
+    <state width="1345" height="151" key="GridCell.Tab.1.right" timestamp="1597314827364">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="151" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1597314827364" />
     <state x="184" y="9" key="SettingsEditor" timestamp="1596822645782">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1596822645782" />
-    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596822713813">
+    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597308077951">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1596822713813" />
+    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1597308077951" />
+    <state x="405" y="276" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1597314293584">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="405" y="276" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1366.728@0.0.1366.728" timestamp="1597314293584" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
