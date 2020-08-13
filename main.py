@@ -2,7 +2,8 @@ import pygame
 import sys
 from sprites import *
 from settings import *
-
+from map import *
+from camera import *
 
 
 class Game:
@@ -14,31 +15,33 @@ class Game:
         self.main_surface.fill(DEFAULT_COLOR)
         self.dt = 0
 
-    def new_game(self):
+    def new_game(self, filename):
         self.all_sprites = pygame.sprite.Group()
         self.walls = pygame.sprite.Group()
-<<<<<<< Updated upstream
-        self.player = Player(self, 0, 0, self.all_sprites)
-        Wall(300, 400, self.all_sprites, self.walls)
-        Wall(300, 432, self.all_sprites, self.walls)
-        Wall(300, 464, self.all_sprites, self.walls)
-=======
-        self.player = Player(self, 100, 300, PLAYER_IMG, self.all_sprites)
-        self.load_data_map()
->>>>>>> Stashed changes
+        self.mobs = pygame.sprite.Group()
+        self.map = Map(filename)
+        for row, tiles in enumerate(self.map.data):
+            for col, tile in enumerate(tiles):
+                if tile == 'w':
+                    Wall(col * SIZE_TILE, row * SIZE_TILE, WALL_IMG, self.all_sprites, self.walls)
+                if tile == 'p':
+                    self.player = Player(self, col * SIZE_TILE, row * SIZE_TILE, PLAYER_IMG, self.all_sprites)
+                if tile == "m":
+                    Mob(self, col * SIZE_TILE, row * SIZE_TILE, MOB_IMG, self.all_sprites, self.mobs)
+        self.camera = Camera(self.map.width, self.map.height)
 
     def update(self):
         self.all_sprites.update()
-        self.main_surface.fill(DEFAULT_COLOR)
-        self.all_sprites.draw(self.main_surface)
+        self.camera.update(self.player)
+        self.main_surface.fill(GRAY)
+        for sprite in self.all_sprites:
+            self.main_surface.blit(sprite.image, self.camera.apply(sprite))
         self.window.blit(self.main_surface, (0, 0))
         pygame.display.update()
         self.dt = pygame.time.Clock().tick(FPS) / 1000
-<<<<<<< Updated upstream
-=======
+
         # print(self.dt)
         # print(self.player.rect.x, self.player.rect.y)
->>>>>>> Stashed changes
 
     def events(self):
         for event in pygame.event.get():
@@ -48,7 +51,7 @@ class Game:
 
 
 game = Game()
-game.new_game()
+game.new_game("f.txt")
 while True:
     game.events()
     game.update()

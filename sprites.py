@@ -89,11 +89,30 @@ class Player(pygame.sprite.Sprite):
 
 
 class Wall(pygame.sprite.Sprite):
-    def __init__(self, x, y, *groups):
+    def __init__(self, x, y, img, *groups):
         pygame.sprite.Sprite.__init__(self)
-        self.size = SIZE_TILE
-        self.rect = pygame.Rect(x, y, self.size, self.size)
-        self.image = pygame.Surface((SIZE_TILE, SIZE_TILE))
-        self.image.fill(GRAY)
+        self.image = pygame.image.load(img)
+        self.rect = self.image.get_rect()
+        self.rect.x, self.rect.y = x, y
         for group in groups:
             group.add(self)
+
+
+class Mob(pygame.sprite.Sprite):
+    def __init__(self, game, x, y, img, *groups):
+        pygame.sprite.Sprite.__init__(self)
+        self.original_image = pygame.image.load(img)
+        self.image = self.original_image
+        self.rect = self.image.get_rect()
+        self.rect.x, self.rect.y = x, y
+        self.game = game
+        for group in groups:
+            group.add(self)
+
+    def update(self):
+        self.rot = (180 / math.pi) * math.atan2(self.game.player.rect.centerx - self.rect.centerx,
+                                                self.game.player.rect.centery - self.rect.centery) - 90
+        self.image = pygame.transform.rotate(self.original_image, self.rot)
+        x, y = self.rect.x, self.rect.y
+        self.rect = self.image.get_rect()
+        self.rect.x, self.rect.y = x, y
