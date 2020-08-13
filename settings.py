@@ -1,7 +1,7 @@
 # There are all game and engine settings
 
 # Main settings
-SIZE_WINDOW = (1024, 768)
+SIZE_WINDOW = (1024, 700)
 DEFAULT_COLOR = (102, 153, 255)
 SIZE_TILE = 32
 FPS = 120
