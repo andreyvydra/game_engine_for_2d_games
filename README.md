@@ -9,6 +9,7 @@ Current functional:
   3. PLayer (collisions, movement, rotation sprite of player, update)
   4. Settings (there is you can personalize main options)
   5. Game (new game, quit, update, events)
+  6. Mob (just focused at player)
 
 
 There is you can find master version: https://github.com/shmonder-glitch/game_engine_for_2d_games
