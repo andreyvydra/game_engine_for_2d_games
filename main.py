@@ -19,18 +19,23 @@ class Game:
         self.all_sprites = pygame.sprite.Group()
         self.walls = pygame.sprite.Group()
         self.mobs = pygame.sprite.Group()
+        self.bullets = pygame.sprite.Group()
         self.map = Map(filename)
         for row, tiles in enumerate(self.map.data):
             for col, tile in enumerate(tiles):
                 if tile == 'w':
                     Wall(col * SIZE_TILE, row * SIZE_TILE, WALL_IMG, self.all_sprites, self.walls)
                 if tile == 'p':
-                    self.player = Player(self, col * SIZE_TILE, row * SIZE_TILE, PLAYER_IMG, self.all_sprites)
+                    self.player = Player(self, col * SIZE_TILE, row * SIZE_TILE, PLAYER_IMG,
+                                         100, PLAYER_HIT_BOX, self.all_sprites)
                 if tile == "m":
-                    Mob(self, col * SIZE_TILE, row * SIZE_TILE, MOB_IMG, self.all_sprites, self.mobs)
+                    Mob(self, col * SIZE_TILE, row * SIZE_TILE, MOB_IMG, 100,
+                        MOB_HIT_BOX, self.all_sprites, self.mobs)
         self.camera = Camera(self.map.width, self.map.height)
 
     def update(self):
+        if self.player.hp <= 0:
+            self.new_game("f.txt")
         self.all_sprites.update()
         self.camera.update(self.player)
         self.main_surface.fill(GRAY)
@@ -39,6 +44,7 @@ class Game:
         self.window.blit(self.main_surface, (0, 0))
         pygame.display.update()
         self.dt = pygame.time.Clock().tick(FPS) / 1000
+        # pygame.display.set_caption(str(self.dt * 1000))
 
         # print(self.dt)
         # print(self.player.rect.x, self.player.rect.y)
