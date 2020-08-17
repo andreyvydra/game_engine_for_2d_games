@@ -21,7 +21,8 @@ class Game:
         self.mobs = pygame.sprite.Group()
         self.bullets = pygame.sprite.Group()
         self.map = Map(filename)
-        for row, tiles in enumerate(self.map.data):
+        self.map_img = self.map.make_map()
+        '''for row, tiles in enumerate(self.map.data):
             for col, tile in enumerate(tiles):
                 if tile == 'w':
                     Wall(col * SIZE_TILE, row * SIZE_TILE, WALL_IMG, self.all_sprites, self.walls)
@@ -30,7 +31,9 @@ class Game:
                                          100, PLAYER_HIT_BOX, self.all_sprites)
                 if tile == "m":
                     Mob(self, col * SIZE_TILE, row * SIZE_TILE, MOB_IMG, 100,
-                        MOB_HIT_BOX, self.all_sprites, self.mobs)
+                        MOB_HIT_BOX, self.all_sprites, self.mobs)'''
+        self.player = Player(self, 100, 100, PLAYER_IMG, 100, PLAYER_HIT_BOX, self.all_sprites)
+        Mob(self, 200, 200, MOB_IMG, 100, MOB_HIT_BOX, self.all_sprites, self.mobs)
         self.camera = Camera(self.map.width, self.map.height)
 
     def update(self):
@@ -38,10 +41,14 @@ class Game:
             self.new_game("f.txt")
         self.all_sprites.update()
         self.camera.update(self.player)
-        self.main_surface.fill(GRAY)
+        # self.main_surface.fill(GRAY)
+        self.map.render(self.map_img)
+        self.window.blit(self.map_img, self.camera.apply_rect(self.map_img.get_rect()))
+        # self.main_surface.rect = self.main_surface.get_rect()
         for sprite in self.all_sprites:
-            self.main_surface.blit(sprite.image, self.camera.apply(sprite))
-        self.window.blit(self.main_surface, (0, 0))
+            print(sprite.rect.x, sprite.rect.y)
+            self.window.blit(sprite.image, self.camera.apply(sprite))
+        # self.window.blit(self.map_img, self.camera.apply(self.map))
         pygame.display.update()
         self.dt = pygame.time.Clock().tick(FPS) / 1000
         # pygame.display.set_caption(str(self.dt * 1000))
@@ -57,7 +64,7 @@ class Game:
 
 
 game = Game()
-game.new_game("f.txt")
+game.new_game("maps/map.tmx")
 while True:
     game.events()
     game.update()
