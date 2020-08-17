@@ -5,7 +5,7 @@ import pygame
 # Main settings
 SIZE_WINDOW = (1024, 650)
 DEFAULT_COLOR = (102, 153, 255)
-SIZE_TILE = 64
+SIZE_TILE = 16
 FPS = 120
 
 # Colors

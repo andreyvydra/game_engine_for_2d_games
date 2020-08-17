@@ -103,6 +103,7 @@ class Player(Someone):
         return change_vector
 
     def update(self):
+        self.check_health()
         self.vel = self.get_direction_and_make_shot()
         self.transform_image()
         self.pos += self.vel * self.game.dt

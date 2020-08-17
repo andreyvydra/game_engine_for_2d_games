@@ -11,6 +11,9 @@ class Camera:
     def apply(self, entity):
         return entity.rect.move(self.camera_rect.topleft)
 
+    def apply_rect(self, entity):
+        return entity.move(self.camera_rect.topleft)
+
     def update(self, target):
         x = -target.rect.centerx + SIZE_WINDOW[0] // 2
         y = -target.rect.centery + SIZE_WINDOW[1] // 2
